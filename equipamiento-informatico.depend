@@ -34,3 +34,35 @@
 	<iostream>
 	"Fecha.h"
 
+1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\cliente.cpp
+	<iostream>
+	"Cliente.h"
+
+1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\cliente.h
+	"TipoCliente.h"
+
+1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\tipocliente.h
+
+1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\fecha.h
+
+1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\producto.cpp
+	<iostream>
+	"Producto.h"
+
+1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\producto.h
+
+1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\tipocliente.cpp
+	<iostream>
+	"TipoCliente.h"
+
+1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\venta.cpp
+	<iostream>
+	"Venta.h"
+
+1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\venta.h
+	"Fecha.h"
+
