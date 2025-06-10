@@ -6,16 +6,16 @@
 	<iostream>
 	"Cliente.h"
 
-1747952519 t:\julia\documents\utn\programacion2\proyecto-integrador\include\cliente.h
+1749578210 t:\julia\documents\utn\programacion2\proyecto-integrador\include\cliente.h
 	"TipoCliente.h"
 
-1747951219 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipocliente.h
+1749578274 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipocliente.h
 
 1747951412 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\producto.cpp
 	<iostream>
 	"Producto.h"
 
-1747951428 t:\julia\documents\utn\programacion2\proyecto-integrador\include\producto.h
+1749578254 t:\julia\documents\utn\programacion2\proyecto-integrador\include\producto.h
 
 1747951196 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\tipocliente.cpp
 	<iostream>
@@ -25,47 +25,12 @@
 	<iostream>
 	"Venta.h"
 
-1747952411 t:\julia\documents\utn\programacion2\proyecto-integrador\include\venta.h
+1749578288 t:\julia\documents\utn\programacion2\proyecto-integrador\include\venta.h
 	"Fecha.h"
 
-1747951236 t:\julia\documents\utn\programacion2\proyecto-integrador\include\fecha.h
+1749578237 t:\julia\documents\utn\programacion2\proyecto-integrador\include\fecha.h
 
 1747952884 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\fecha.cpp
 	<iostream>
 	"Fecha.h"
-
-1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\cliente.cpp
-	<iostream>
-	"Cliente.h"
-
-1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\cliente.h
-	"TipoCliente.h"
-
-1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\tipocliente.h
-
-1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\fecha.cpp
-	<iostream>
-	"Fecha.h"
-
-1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\fecha.h
-
-1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\producto.cpp
-	<iostream>
-	"Producto.h"
-
-1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\producto.h
-
-1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\tipocliente.cpp
-	<iostream>
-	"TipoCliente.h"
-
-1748379801 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\src\venta.cpp
-	<iostream>
-	"Venta.h"
-
-1748379801 c:\users\nicol\onedrive\escritorio\proyecto-integrador\include\venta.h
-	"Fecha.h"
-
-1748380624 source:c:\users\nicol\onedrive\escritorio\proyecto-integrador\main.cpp
-	<iostream>
 
