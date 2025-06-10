@@ -8,7 +8,10 @@ class TipoCliente
         int _tipo;
 
     public:
-        TipoCliente();
+        int getTipo();
+        void setTipo(int);
+
+        const char* getDescripcion();
 
 };
 

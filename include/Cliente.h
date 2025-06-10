@@ -15,6 +15,30 @@ class Cliente
         TipoCliente _tipoCliente;
 
     public:
+        int getCuit();
+        void setCuit(int);
+
+        const char* getNombre();
+        void setNombre(const char*);
+
+        const char* getApellido();
+        void setApellido(const char*);
+
+        const char* getTelefono();
+        void setTelefono(const char*);
+
+        const char* getEmail();
+        void setEmail(const char*);
+
+        const char* getDireccion();
+        void setDireccion(const char*);
+
+        TipoCliente getTipoCliente();
+        void setTipoCliente(TipoCliente);
+
+        void cargarCliente();
+        void listarClientes();
+        void mostrarCliente();
 
 
 };

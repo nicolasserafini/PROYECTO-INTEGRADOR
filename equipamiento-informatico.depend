@@ -1,15 +1,19 @@
 # depslib dependency file v1.0
-1747952799 source:t:\julia\documents\utn\programacion2\proyecto-integrador\main.cpp
+1749585125 source:t:\julia\documents\utn\programacion2\proyecto-integrador\main.cpp
 	<iostream>
+	"Menu.h"
 
-1747950740 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\cliente.cpp
+1749595494 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\cliente.cpp
 	<iostream>
+	<cstring>
 	"Cliente.h"
+	"TipoCliente.h"
+	"ArchivoCliente.h"
 
-1749578210 t:\julia\documents\utn\programacion2\proyecto-integrador\include\cliente.h
+1749595287 t:\julia\documents\utn\programacion2\proyecto-integrador\include\cliente.h
 	"TipoCliente.h"
 
-1749578274 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipocliente.h
+1749587020 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipocliente.h
 
 1747951412 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\producto.cpp
 	<iostream>
@@ -17,7 +21,7 @@
 
 1749578254 t:\julia\documents\utn\programacion2\proyecto-integrador\include\producto.h
 
-1747951196 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\tipocliente.cpp
+1749590721 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\tipocliente.cpp
 	<iostream>
 	"TipoCliente.h"
 
@@ -33,4 +37,19 @@
 1747952884 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\fecha.cpp
 	<iostream>
 	"Fecha.h"
+
+1749580404 t:\julia\documents\utn\programacion2\proyecto-integrador\include\menu.h
+
+1749595795 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\menu.cpp
+	<iostream>
+	"Menu.h"
+	"Cliente.h"
+	"ArchivoCliente.h"
+
+1749595884 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\archivocliente.cpp
+	<iostream>
+	"ArchivoCliente.h"
+
+1749591544 t:\julia\documents\utn\programacion2\proyecto-integrador\include\archivocliente.h
+	"Cliente.h"
 
