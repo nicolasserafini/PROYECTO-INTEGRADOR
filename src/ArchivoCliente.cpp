@@ -57,3 +57,14 @@ int ArchivoCliente::cantidadRegistros()
     fclose(p);
     return bytes / sizeof(Cliente);
 }
+
+bool ArchivoCliente::sobrescribir(Cliente reg, int pos)
+{
+    FILE* p = fopen(_nombre, "rb+");
+    if (p == nullptr) return false;
+
+    fseek(p, pos * sizeof(Cliente), SEEK_SET);
+    bool ok = fwrite(&reg, sizeof(Cliente), 1, p);
+    fclose(p);
+    return ok;
+}

@@ -12,6 +12,7 @@ class ArchivoCliente
         bool guardar(Cliente reg);
         Cliente leer(int pos);
         int cantidadRegistros();
+        bool sobrescribir(Cliente reg, int pos);
 };
 
 #endif // ARCHIVOCLIENTE_H

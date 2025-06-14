@@ -53,7 +53,6 @@ void Menu::menuPrincipal()
     while(opcion != 0);
 }
 
-
 void Menu::menuClientes()
 {
     int opcion;
@@ -98,13 +97,13 @@ void Menu::menuClientes()
                 break;
             }
         case 3:
-
+            menuClientesBuscar();
             break;
         case 4:
 
             break;
         case 5:
-
+            menuClientesBorrar();
             break;
         case 0:
             break;
@@ -115,4 +114,38 @@ void Menu::menuClientes()
         }
     }
     while(opcion != 0);
+}
+
+void Menu::menuClientesBuscar()
+{
+    char cuit[20];
+
+    limpiarPantalla();
+
+    cout << "======= MENU BUSQUEDA DE CLIENTE =======" << endl;
+    cout << "Ingrese el CUIL del cliente a buscar: ";
+    cin >> cuit;
+    cout << endl;
+
+    limpiarPantalla();
+
+    Cliente c;
+    c.buscarCliente(cuit);
+}
+
+void Menu::menuClientesBorrar()
+{
+    char cuit[20];
+
+    limpiarPantalla();
+
+    cout << "======= MENU ELIMINACION DE CLIENTE =======" << endl;
+    cout << "Ingrese el CUIL del cliente a eliminar: ";
+    cin >> cuit;
+    cout << endl;
+
+    limpiarPantalla();
+
+    Cliente c;
+    c.borrarCliente(cuit);
 }

@@ -9,7 +9,8 @@ class Menu
         void menuClientes();
         void menuProductos();
         void menuVentas();
-
+        void menuClientesBuscar();
+        void menuClientesBorrar();
 };
 
 #endif

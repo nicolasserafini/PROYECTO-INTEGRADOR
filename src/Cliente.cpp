@@ -6,13 +6,13 @@
 using namespace std;
 
 //Getters y Setters
-int Cliente::getCuit()
+const char* Cliente::getCuit()
 {
     return _cuit;
 }
-void Cliente::setCuit(int c)
+void Cliente::setCuit(const char* c)
 {
-    _cuit = c;
+    strncpy(_cuit, c, sizeof(_cuit));
 }
 
 const char* Cliente::getNombre()
@@ -70,12 +70,22 @@ void Cliente::setTipoCliente(TipoCliente t)
     _tipoCliente = t;
 }
 
+bool Cliente::getActivo()
+{
+    return _activo;
+}
+
+void Cliente::setActivo(bool activo)
+{
+    _activo = activo;
+}
+
 
 //Funciones
 void Cliente::cargarCliente()
 {
-    int c, tipo;
-    char n[20], a[20], t[20], e[60], d[100];
+    char c[20], n[20], a[20], t[20], e[60], d[100];
+    int tipo;
 
     cout << "======= CARGA DE CLIENTES =======" << endl;
     cout<<"Ingrese el numero de cuit: ";
@@ -89,7 +99,8 @@ void Cliente::cargarCliente()
     cout<<"Ingrese email de cliente: ";
     cin>>e;
     cout<<"Ingrese direccion de cliente: ";
-    cin>>d;
+    cin.ignore();
+    cin.getline(d, sizeof(d));
     cout<<"Ingrese tipo de cliente (1 o 2): ";
     cin>>tipo;
 
@@ -118,8 +129,12 @@ void Cliente::listarClientes()
     for (int i = 0; i < cant; i++)
     {
         Cliente c = arch.leer(i);
-        c.mostrarCliente();
-        cout << "-----------------------------" << endl << endl;
+
+        if(c.getActivo())
+        {
+            c.mostrarCliente();
+            cout << "-----------------------------" << endl << endl;
+        }
     }
 
     system("pause");
@@ -134,4 +149,63 @@ void Cliente::mostrarCliente()
     cout << "Email: " << _email << endl;
     cout << "Direccion: " << _direccion << endl;
     cout << "Tipo de cliente: " << _tipoCliente.getDescripcion() << endl;
+}
+
+void Cliente::buscarCliente(const char* cuit)
+{
+    ArchivoCliente arch;
+    int cant = arch.cantidadRegistros();
+    bool encontrado = false;
+
+    for(int i=0; i < cant; i++)
+    {
+        Cliente c = arch.leer(i);
+
+        if(c.getActivo() && strcmp(c.getCuit(), cuit) == 0) //compara el contenido de ambas cadenas
+        {
+            cout << "======= Cliente encontrado =======" << endl << endl;
+            c.mostrarCliente();
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (!encontrado)
+    {
+        cout << "No se encontro ningun cliente con el CUIT ingresado." << endl;
+    }
+
+    cout << endl;
+    system("pause");
+}
+
+void Cliente::borrarCliente(const char* cuit)
+{
+    ArchivoCliente arch;
+    int cant = arch.cantidadRegistros();
+    bool encontrado = false;
+
+    for(int i=0; i < cant; i++)
+    {
+        Cliente c = arch.leer(i);
+
+        if(c.getActivo() && strcmp(c.getCuit(), cuit) == 0) //compara el contenido de ambas cadenas
+        {
+            c.setActivo(false);
+            arch.sobrescribir(c, i);
+
+            cout << "Cliente eliminado correctamente" << endl << endl;
+
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (!encontrado)
+    {
+        cout << "No se encontro ningun cliente con el CUIT ingresado." << endl;
+    }
+
+    cout << endl;
+    system("pause");
 }
