@@ -1,7 +1,7 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
-#pragma once
 #include "TipoCliente.h"
+#pragma once
 
 class Cliente
 {
@@ -43,7 +43,8 @@ class Cliente
         void cargarCliente();
         void listarClientes();
         void mostrarCliente();
-        void buscarCliente(const char*);
+        bool buscarCliente(const char* cuit, Cliente &clienteEncontrado, int &posEncontrado);
+        void editarCliente(int opcion);
         void borrarCliente(const char*);
 };
 

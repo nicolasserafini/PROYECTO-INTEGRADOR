@@ -10,6 +10,7 @@ class Menu
         void menuProductos();
         void menuVentas();
         void menuClientesBuscar();
+        void menuClientesEditar();
         void menuClientesBorrar();
 };
 

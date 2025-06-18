@@ -3,14 +3,14 @@
 	<iostream>
 	"Menu.h"
 
-1749932516 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\cliente.cpp
+1750277470 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\cliente.cpp
 	<iostream>
 	<cstring>
 	"Cliente.h"
 	"TipoCliente.h"
 	"ArchivoCliente.h"
 
-1749931650 t:\julia\documents\utn\programacion2\proyecto-integrador\include\cliente.h
+1750277186 t:\julia\documents\utn\programacion2\proyecto-integrador\include\cliente.h
 	"TipoCliente.h"
 
 1749587020 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipocliente.h
@@ -38,9 +38,9 @@
 	<iostream>
 	"Fecha.h"
 
-1749930925 t:\julia\documents\utn\programacion2\proyecto-integrador\include\menu.h
+1750272804 t:\julia\documents\utn\programacion2\proyecto-integrador\include\menu.h
 
-1749931073 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\menu.cpp
+1750277516 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\menu.cpp
 	<iostream>
 	"Menu.h"
 	"Cliente.h"

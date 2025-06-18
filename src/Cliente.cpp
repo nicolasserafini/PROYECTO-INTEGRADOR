@@ -151,11 +151,10 @@ void Cliente::mostrarCliente()
     cout << "Tipo de cliente: " << _tipoCliente.getDescripcion() << endl;
 }
 
-void Cliente::buscarCliente(const char* cuit)
+bool Cliente::buscarCliente(const char* cuit, Cliente &clienteEncontrado, int &posEncontrado)
 {
     ArchivoCliente arch;
     int cant = arch.cantidadRegistros();
-    bool encontrado = false;
 
     for(int i=0; i < cant; i++)
     {
@@ -163,19 +162,78 @@ void Cliente::buscarCliente(const char* cuit)
 
         if(c.getActivo() && strcmp(c.getCuit(), cuit) == 0) //compara el contenido de ambas cadenas
         {
-            cout << "======= Cliente encontrado =======" << endl << endl;
-            c.mostrarCliente();
-            encontrado = true;
-            break;
+            clienteEncontrado = c;
+            posEncontrado = i;
+            return true;
         }
     }
 
-    if (!encontrado)
+    return false;
+}
+
+void Cliente::editarCliente(int opcion)
+{
+    char nuevoValor[100];
+    int nuevoTipo;
+    ArchivoCliente arch;
+
+    switch(opcion)
     {
-        cout << "No se encontro ningun cliente con el CUIT ingresado." << endl;
+    case 1:
+        cout << "Nuevo CUIT: ";
+        cin >> nuevoValor;
+        cout << endl;
+        setCuit(nuevoValor);
+        break;
+    case 2:
+        cout << "Nuevo nombre: ";
+        cin >> nuevoValor;
+        cout << endl;
+        setNombre(nuevoValor);
+        break;
+    case 3:
+        cout << "Nuevo apellido: ";
+        cin >> nuevoValor;
+        cout << endl;
+        setApellido(nuevoValor);
+        break;
+    case 4:
+        cout << "Nuevo telefono: ";
+        cin >> nuevoValor;
+        cout << endl;
+        setTelefono(nuevoValor);
+        break;
+    case 5:
+        cout << "Nuevo mail: ";
+        cin >> nuevoValor;
+        cout << endl;
+        setEmail(nuevoValor);
+        break;
+    case 6:
+        cin.ignore();
+        cout << "Nueva direccion: ";
+        cin.getline(nuevoValor, sizeof(nuevoValor));
+        cout << endl;
+        setDireccion(nuevoValor);
+        break;
+    case 7:
+        cout << "Nuevo tipo de cliente (1 o 2): ";
+        cin >> nuevoTipo;
+        TipoCliente tc;
+        cout << endl;
+        tc.setTipo(nuevoTipo);
+        setTipoCliente(tc);
+        break;
+    default:
+        cout << "Opcion invalida." << endl;
+        return;
     }
 
-    cout << endl;
+    cout << "======================================" << endl << endl;
+    cout << "Cliente actualizado:" << endl << endl;
+
+    mostrarCliente();
+
     system("pause");
 }
 

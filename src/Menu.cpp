@@ -100,7 +100,7 @@ void Menu::menuClientes()
             menuClientesBuscar();
             break;
         case 4:
-
+            menuClientesEditar();
             break;
         case 5:
             menuClientesBorrar();
@@ -119,6 +119,8 @@ void Menu::menuClientes()
 void Menu::menuClientesBuscar()
 {
     char cuit[20];
+    bool res;
+    int pos;
 
     limpiarPantalla();
 
@@ -129,8 +131,20 @@ void Menu::menuClientesBuscar()
 
     limpiarPantalla();
 
-    Cliente c;
-    c.buscarCliente(cuit);
+    Cliente c, encontrado;
+    res = c.buscarCliente(cuit, encontrado, pos);
+
+    if(res)
+    {
+        cout << "======= ¡Cliente encontrado! =======" << endl << endl;
+        encontrado.mostrarCliente();
+    }
+    else
+    {
+        cout << "No se encontro ningun cliente con el CUIT ingresado." << endl;
+    }
+
+    system("pause");
 }
 
 void Menu::menuClientesBorrar()
@@ -148,4 +162,50 @@ void Menu::menuClientesBorrar()
 
     Cliente c;
     c.borrarCliente(cuit);
+}
+
+void Menu::menuClientesEditar()
+{
+    char cuit[20];
+    int opcion, pos;
+    bool res;
+
+    limpiarPantalla();
+
+    cout << "======= EDICION DE CLIENTE =======" << endl;
+    cout << "Ingrese el CUIL del cliente a editar: ";
+    cin >> cuit;
+    cout << endl;
+
+    Cliente c, encontrado;
+    res = c.buscarCliente(cuit, encontrado, pos);
+
+    if(res)
+    {
+        cout << "======= ¡Cliente encontrado! =======" << endl << endl;
+
+        cout << "¿Que quiere editar?" << endl;
+
+        cout << "1. CUIL" << endl;
+        cout << "2. Nombre" << endl;
+        cout << "3. Apellido" << endl;
+        cout << "4. Telefono" << endl;
+        cout << "5. Mail" << endl;
+        cout << "6. Direccion" << endl;
+        cout << "7. Tipo de cliente" << endl;
+
+        cout<< "Elija una opcion: ";
+        cin >> opcion;
+
+
+        encontrado.editarCliente(opcion);
+
+        ArchivoCliente arch;
+        arch.sobrescribir(encontrado, pos);
+    }
+    else
+    {
+        cout << "No se encontro ningun cliente con el CUIT ingresado." << endl;
+    }
+
 }
