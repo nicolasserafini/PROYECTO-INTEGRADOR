@@ -35,19 +35,25 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/ArchivoCliente.h" />
+		<Unit filename="include/ArchivoTipoProducto.h" />
 		<Unit filename="include/Cliente.h" />
 		<Unit filename="include/Fecha.h" />
 		<Unit filename="include/Menu.h" />
 		<Unit filename="include/Producto.h" />
 		<Unit filename="include/TipoCliente.h" />
+		<Unit filename="include/TipoProducto.h" />
+		<Unit filename="include/Utilidades.h" />
 		<Unit filename="include/Venta.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ArchivoCliente.cpp" />
+		<Unit filename="src/ArchivoTipoProducto.cpp" />
 		<Unit filename="src/Cliente.cpp" />
 		<Unit filename="src/Fecha.cpp" />
 		<Unit filename="src/Menu.cpp" />
 		<Unit filename="src/Producto.cpp" />
 		<Unit filename="src/TipoCliente.cpp" />
+		<Unit filename="src/TipoProducto.cpp" />
+		<Unit filename="src/Utilidades.cpp" />
 		<Unit filename="src/Venta.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

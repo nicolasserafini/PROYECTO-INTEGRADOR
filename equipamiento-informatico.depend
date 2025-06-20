@@ -1,9 +1,9 @@
 # depslib dependency file v1.0
-1749927354 source:t:\julia\documents\utn\programacion2\proyecto-integrador\main.cpp
+1750455394 source:t:\julia\documents\utn\programacion2\proyecto-integrador\main.cpp
 	<iostream>
 	"Menu.h"
 
-1750277470 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\cliente.cpp
+1750277659 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\cliente.cpp
 	<iostream>
 	<cstring>
 	"Cliente.h"
@@ -15,11 +15,14 @@
 
 1749587020 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipocliente.h
 
-1747951412 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\producto.cpp
+1750461473 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\producto.cpp
 	<iostream>
+	<cstring>
 	"Producto.h"
+	"Utilidades.h"
 
-1749578254 t:\julia\documents\utn\programacion2\proyecto-integrador\include\producto.h
+1750461663 t:\julia\documents\utn\programacion2\proyecto-integrador\include\producto.h
+	"TipoProducto.h"
 
 1749590721 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\tipocliente.cpp
 	<iostream>
@@ -38,18 +41,42 @@
 	<iostream>
 	"Fecha.h"
 
-1750272804 t:\julia\documents\utn\programacion2\proyecto-integrador\include\menu.h
+1750459605 t:\julia\documents\utn\programacion2\proyecto-integrador\include\menu.h
 
-1750277516 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\menu.cpp
+1750461874 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\menu.cpp
 	<iostream>
 	"Menu.h"
 	"Cliente.h"
 	"ArchivoCliente.h"
+	"Utilidades.h"
+	"TipoProducto.h"
+	"ArchivoTipoProducto.h"
 
-1749932368 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\archivocliente.cpp
+1750459327 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\archivocliente.cpp
 	<iostream>
 	"ArchivoCliente.h"
 
 1749932219 t:\julia\documents\utn\programacion2\proyecto-integrador\include\archivocliente.h
 	"Cliente.h"
+
+1750459458 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\archivotipoproducto.cpp
+	<iostream>
+	"ArchivoTipoProducto.h"
+
+1750459079 t:\julia\documents\utn\programacion2\proyecto-integrador\include\archivotipoproducto.h
+	"TipoProducto.h"
+
+1750460841 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipoproducto.h
+
+1750457984 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\utilidades.cpp
+	<iostream>
+	"Utilidades.h"
+
+1750458002 t:\julia\documents\utn\programacion2\proyecto-integrador\include\utilidades.h
+
+1750461857 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\tipoproducto.cpp
+	<iostream>
+	<cstring>
+	"TipoProducto.h"
+	"ArchivoTipoProducto.h"
 

@@ -6,12 +6,16 @@ class Menu
 {
     public:
         void menuPrincipal();
+
         void menuClientes();
-        void menuProductos();
-        void menuVentas();
         void menuClientesBuscar();
         void menuClientesEditar();
         void menuClientesBorrar();
+
+        void menuProductos();
+        void menuTipoProductos();
+
+        void menuVentas();
 };
 
 #endif

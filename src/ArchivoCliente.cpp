@@ -9,7 +9,7 @@ bool ArchivoCliente::guardar(Cliente reg)
     if(p==NULL)
     {
         cout<<"Error de archivo"<<endl;
-        exit(1);
+        return false;
     }
 
     bool ok = fwrite(&reg, sizeof(Cliente), 1, p);
@@ -28,7 +28,7 @@ Cliente ArchivoCliente::leer(int pos)
     if(p==NULL)
     {
         cout<<"Error de archivo"<<endl;
-        exit(1);
+        return reg; //devuelve el registro vacio
     }
 
     fseek(p, pos * sizeof(Cliente), SEEK_SET);
@@ -47,7 +47,7 @@ int ArchivoCliente::cantidadRegistros()
     if(p==NULL)
     {
         cout<<"Error de archivo"<<endl;
-        exit(1);
+        return 0;
     }
 
     fseek(p, 0, SEEK_END);
@@ -61,7 +61,12 @@ int ArchivoCliente::cantidadRegistros()
 bool ArchivoCliente::sobrescribir(Cliente reg, int pos)
 {
     FILE* p = fopen(_nombre, "rb+");
-    if (p == nullptr) return false;
+
+    if(p==NULL)
+    {
+        cout<<"Error de archivo"<<endl;
+        return false;
+    }
 
     fseek(p, pos * sizeof(Cliente), SEEK_SET);
     bool ok = fwrite(&reg, sizeof(Cliente), 1, p);
