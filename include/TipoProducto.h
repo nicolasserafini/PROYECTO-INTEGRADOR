@@ -21,7 +21,10 @@ class TipoProducto
 
         void cargar();
         void mostrar();
-        void listarProductos();
+        void listarTipoProducto();
+        void editarTipoProducto();
+        bool buscarTipoProducto(int idBuscado, TipoProducto &tipoEncontrado, int &posEncontrado);
+        void borrarTipoProducto(int id);
 };
 
 #endif // TIPOPRODUCTO_H

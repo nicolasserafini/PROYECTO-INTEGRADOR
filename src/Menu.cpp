@@ -93,12 +93,15 @@ void Menu::menuClientes()
                 break;
             }
         case 3:
+            ut.limpiarPantalla();
             menuClientesBuscar();
             break;
         case 4:
+            ut.limpiarPantalla();
             menuClientesEditar();
             break;
         case 5:
+            ut.limpiarPantalla();
             menuClientesBorrar();
             break;
         case 0:
@@ -117,9 +120,8 @@ void Menu::menuClientesBuscar()
     char cuit[20];
     bool res;
     int pos;
-    Utilidades ut;
 
-    ut.limpiarPantalla();
+    Utilidades ut;
 
     cout << "======= MENU BUSQUEDA DE CLIENTE =======" << endl;
     cout << "Ingrese el CUIL del cliente a buscar: ";
@@ -147,9 +149,8 @@ void Menu::menuClientesBuscar()
 void Menu::menuClientesBorrar()
 {
     char cuit[20];
-    Utilidades ut;
 
-    ut.limpiarPantalla();
+    Utilidades ut;
 
     cout << "======= MENU ELIMINACION DE CLIENTE =======" << endl;
     cout << "Ingrese el CUIL del cliente a eliminar: ";
@@ -167,9 +168,6 @@ void Menu::menuClientesEditar()
     char cuit[20];
     int opcion, pos;
     bool res;
-    Utilidades ut;
-
-    ut.limpiarPantalla();
 
     cout << "======= EDICION DE CLIENTE =======" << endl;
     cout << "Ingrese el CUIL del cliente a editar: ";
@@ -242,6 +240,7 @@ void Menu::menuProductos()
         case 5:
             break;
         case 6:
+            ut.limpiarPantalla();
             menuTipoProductos();
             break;
         case 0:
@@ -287,14 +286,20 @@ void Menu::menuTipoProductos()
                 ut.limpiarPantalla();
 
                 TipoProducto tp;
-                tp.listarProductos();
+                tp.listarTipoProducto();
                 break;
             }
         case 3:
-            // editarTipoProducto();
-            break;
+            {
+                ut.limpiarPantalla();
+
+                menuTipoPrEditar();
+                break;
+            }
         case 4:
-            // eliminarTipoProducto();
+            ut.limpiarPantalla();
+
+            menuTipoPrBorrar();
             break;
         case 0:
             break;
@@ -304,4 +309,81 @@ void Menu::menuTipoProductos()
         }
     }
     while(opcion != 0);
+}
+
+void Menu::menuTipoPrEditar()
+{
+    int id, pos, opcion;
+
+    cout << "======= EDICION DE TIPO DE PRODUCTO =======" << endl;
+    cout << "Ingrese el ID del tipo de producto a editar: ";
+    cin >> id;
+    cout << endl;
+
+    TipoProducto encontrado;
+    TipoProducto tp;
+
+    if (tp.buscarTipoProducto(id, encontrado, pos))
+    {
+        cout << "Tipo encontrado:" << endl << endl;
+        cout << "-----------------------------" << endl;
+        encontrado.mostrar();
+        cout << "-----------------------------" << endl << endl;
+    }
+    else
+    {
+        cout << "No se encontró el tipo con ese ID." << endl;
+        system("pause");
+        return;
+    }
+
+    cout << "¿Quiere continuar con la edicion?" << endl;
+    cout << "1. Si - 2. No" << endl;
+    cout << "Ingrese opcion: ";
+    cin >> opcion;
+
+    switch(opcion)
+    {
+    case 1:
+    {
+        ArchivoTipoProducto arch;
+
+        encontrado.editarTipoProducto();
+
+        arch.sobrescribir(encontrado, pos);
+
+        break;
+    }
+    case 2:
+        break;
+    default:
+        cout << "Opcion incorrecta." << endl;
+        system("pause");
+    }
+}
+
+void Menu::menuTipoPrBorrar()
+{
+    int id, pos;
+    bool res = false;
+
+    cout << "======= ELIMINACION DE TIPO DE PRODUCTO =======" << endl;
+    cout << "Ingrese el ID del tipo a eliminar: ";
+    cin >> id;
+    cout << endl;
+
+    TipoProducto tp;
+    TipoProducto encontrado;
+
+    res = tp.buscarTipoProducto(id, encontrado, pos);
+
+    if(res)
+    {
+        encontrado.borrarTipoProducto(pos);
+    }
+    else
+    {
+        cout << "ID no encontrado" << endl;
+    }
+    system("pause");
 }

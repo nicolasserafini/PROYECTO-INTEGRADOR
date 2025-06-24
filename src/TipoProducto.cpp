@@ -72,7 +72,7 @@ void TipoProducto::mostrar()
     cout << "Descripcion: " << _descripcion << endl;
 }
 
-void TipoProducto::listarProductos()
+void TipoProducto::listarTipoProducto()
 {
     ArchivoTipoProducto arch;
     int cant = arch.cantidadRegistros();
@@ -91,4 +91,59 @@ void TipoProducto::listarProductos()
 
     cout << endl;
     system("pause");
+}
+
+bool TipoProducto::buscarTipoProducto(int idBuscado, TipoProducto &tipoEncontrado, int &posEncontrado)
+{
+    ArchivoTipoProducto arch;
+    int cant = arch.cantidadRegistros();
+
+    for (int i = 0; i < cant; i++)
+    {
+        TipoProducto t = arch.leer(i);
+        if (t.getActivo() && t.getIdTipo() == idBuscado)
+        {
+            tipoEncontrado = t;
+            posEncontrado = i;
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void TipoProducto::editarTipoProducto()
+{
+    char nuevaDesc[50];
+
+    ArchivoTipoProducto arch;
+
+    cout << "Nueva descripcion: ";
+    cin.ignore();
+    cin.getline(nuevaDesc, sizeof(nuevaDesc));
+    cout << endl;
+    setDescripcion(nuevaDesc);
+
+    cout << "======================================" << endl << endl;
+    cout << "Tipo de producto actualizado:" << endl << endl;
+
+    mostrar();
+
+    system("pause");
+}
+
+void TipoProducto::borrarTipoProducto(int pos)
+{
+    ArchivoTipoProducto arch;
+
+    setActivo(false);
+
+    if (arch.sobrescribir(*this, pos))
+    {
+        cout << "Tipo de producto eliminado correctamente" << endl << endl;
+    }
+    else
+    {
+        cout << "Error al eliminar el tipo de producto" << endl << endl;
+    }
 }

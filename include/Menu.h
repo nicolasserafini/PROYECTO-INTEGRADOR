@@ -13,7 +13,10 @@ class Menu
         void menuClientesBorrar();
 
         void menuProductos();
+
         void menuTipoProductos();
+        void menuTipoPrEditar();
+        void menuTipoPrBorrar();
 
         void menuVentas();
 };

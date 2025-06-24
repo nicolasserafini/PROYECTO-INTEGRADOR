@@ -44,7 +44,7 @@ class Cliente
         void listarClientes();
         void mostrarCliente();
         bool buscarCliente(const char* cuit, Cliente &clienteEncontrado, int &posEncontrado);
-        void editarCliente(int opcion);
+        void editarCliente(int);
         void borrarCliente(const char*);
 };
 

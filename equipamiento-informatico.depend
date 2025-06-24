@@ -10,7 +10,7 @@
 	"TipoCliente.h"
 	"ArchivoCliente.h"
 
-1750277186 t:\julia\documents\utn\programacion2\proyecto-integrador\include\cliente.h
+1750794151 t:\julia\documents\utn\programacion2\proyecto-integrador\include\cliente.h
 	"TipoCliente.h"
 
 1749587020 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipocliente.h
@@ -41,9 +41,9 @@
 	<iostream>
 	"Fecha.h"
 
-1750459605 t:\julia\documents\utn\programacion2\proyecto-integrador\include\menu.h
+1750793412 t:\julia\documents\utn\programacion2\proyecto-integrador\include\menu.h
 
-1750461874 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\menu.cpp
+1750795050 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\menu.cpp
 	<iostream>
 	"Menu.h"
 	"Cliente.h"
@@ -63,10 +63,10 @@
 	<iostream>
 	"ArchivoTipoProducto.h"
 
-1750459079 t:\julia\documents\utn\programacion2\proyecto-integrador\include\archivotipoproducto.h
+1750790846 t:\julia\documents\utn\programacion2\proyecto-integrador\include\archivotipoproducto.h
 	"TipoProducto.h"
 
-1750460841 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipoproducto.h
+1750793322 t:\julia\documents\utn\programacion2\proyecto-integrador\include\tipoproducto.h
 
 1750457984 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\utilidades.cpp
 	<iostream>
@@ -74,9 +74,10 @@
 
 1750458002 t:\julia\documents\utn\programacion2\proyecto-integrador\include\utilidades.h
 
-1750461857 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\tipoproducto.cpp
+1750794554 source:t:\julia\documents\utn\programacion2\proyecto-integrador\src\tipoproducto.cpp
 	<iostream>
 	<cstring>
 	"TipoProducto.h"
 	"ArchivoTipoProducto.h"
+	"Utilidades.h"
 
